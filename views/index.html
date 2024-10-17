@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/assets/favicon.png">
+    <title>Calculadora</title>
+    <script src="/main.js" defer></script>
+</head>
+<body>
+    <!-- CONTENEDOR DE LA CALCULADORA QUE SE MOSTRARÁ AL USUARIO Y CONTENDRÁ TODOS LOS ELEMENTOS -->
+    <div id="calculadora">
+        <!-- CUADRO DE SALIDA EN EL QUE SE MOSTRARÁ LOS DATOS INGRESADOS Y LOS RESULTADOS DE LAS OPERACIONES -->
+        <input id="cuadroDeSalida" readonly>
+        <!-- CONJUNTO DE TECLAS QUE COMPONEN LA CALCULADORA -->
+        <div id="teclas">
+            <!-- PRIMERA FILA -->
+            <button id="btnAC" class="specialBtn" onclick="clearBtn()">AC</button>
+            <button id="btnDE" class="specialBtn" onclick="clearLastBtn()">DE</button>
+            <button class="specialBtn" onclick="key('/')">÷</button>
+            <button id="btnMUL" class="specialBtn" onclick="key('*')">x</button>
+    
+            <!-- SEGUNDA FILA -->
+            <button id="btnN7" onclick="key('7')">7</button>
+            <button id="btnN8" onclick="key('8')">8</button>
+            <button id="btnN9" onclick="key('9')">9</button>
+            <button id="btnSUM" class="specialBtn" onclick="key('+')">+</button>
+    
+            <!-- TERCERA FILA -->
+            <button id="btnN4" onclick="key('4')">4</button>
+            <button id="btnN5" onclick="key('5')">5</button>
+            <button id="btnN6" onclick="key('6')">6</button>
+            <button id="btnRES" class="specialBtn" onclick="key('-')">-</button>
+    
+            <!-- CUARTA FILA -->
+            <button id="btnN1" onclick="key('1')">1</button>
+            <button id="btnN2" onclick="key('2')">2</button>
+            <button id="btnN3" onclick="key('3')">3</button>
+            <button class="specialBtn" id="raiz" onclick="raiz()">√</button>
+            
+            <!-- QUINTA FILA -->
+            <button id="btnPOINT" onclick="key('.')">.</button>
+            <button id="btnN0" onclick="key('0')">0</button>
+            <button id="resultBtn" onclick="result()">=</button>
+        </div>
+    </div>
+</body>
+</html>
